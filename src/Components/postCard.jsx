@@ -10,7 +10,8 @@ export function PostCard() {
     const card = (
         <React.Fragment>
             <CardContent>
-                <h1>teste</h1>
+                <h1>titulo</h1>
+                <h4>descricao</h4>
             </CardContent>
             <CardActions>
                 
