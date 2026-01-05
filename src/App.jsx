@@ -11,7 +11,9 @@ function App() {
     <>
       <top style={{display: 'flex', gap: '20px', padding: '10px', justifyContent: 'right'}}>
         <Link to="/" style={{textDecoration: 'none', color: 'black', display: 'flex'}}><HomeIcon />Home</Link>
-        <Link to="/Login" style={{textDecoration: 'none', color: 'black', display: 'flex'}}><LoginIcon />Login</Link>
+        <Link to="/Login" style={{textDecoration: 'none', color: 'black', display: 'flex'}}>Login</Link>
+        <Link to="/register" style={{textDecoration: 'none', color: 'black', display: 'flex'}}>Register</Link>
+        
       </top>
 
       <main>

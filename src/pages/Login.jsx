@@ -1,13 +1,13 @@
-import { Box } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 
 export default function Login() {
-  return(
+  return (
     <>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', mt: 5 }}>
-        <h1>Login Page</h1>
-        <input type="text" placeholder="login"/>
-        <input type="password" placeholder="senha"/>
-        <input type="button" value="Login" />
+        <h1>Faça Login</h1>
+        <TextField id="Login-input" label="Login" variant="outlined" />
+        <TextField id="Password-input" label="Senha" variant="outlined" />
+        <Button id="LoginBtn" variant="outlined">Login</Button>
       </Box>
     </>
   );

@@ -7,13 +7,13 @@ export default function Home() {
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            <Link to="/post" style={{textDecoration: 'none'}}>
+            <Link to="/post/1" style={{textDecoration: 'none'}}>
                 <PostCard />
             </Link>
-            <Link to="/post" style={{textDecoration: 'none'}}>
+            <Link to="/post/2" style={{textDecoration: 'none'}}>
                 <PostCard />
             </Link>
-            <Link to="/post" style={{textDecoration: 'none'}}>
+            <Link to="/post/3" style={{textDecoration: 'none'}}>
                 <PostCard />
             </Link>
 
