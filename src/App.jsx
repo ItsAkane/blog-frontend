@@ -1,25 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import Home from './pages/home.jsx'
-import Login from './pages/Login.jsx'
-import Post from './pages/post.jsx'
-import './App.css'
+import { Link, Outlet } from 'react-router-dom'
+import './App.css';
+import HomeIcon from '@mui/icons-material/Home';
+import LoginIcon from '@mui/icons-material/Login';
 
 function App() {
+
+
+
   return (
     <>
-      <Router>
-        <nav style={{ marginBottom: '20px' }}>
-          <Link to="/">Home</Link> |{' '}
-          <Link to="/login">Login</Link> |{' '}
-          <Link to="/post/1">Post 1</Link>
-        </nav>
+      <top style={{display: 'flex', gap: '20px', padding: '10px', justifyContent: 'right'}}>
+        <Link to="/" style={{textDecoration: 'none', color: 'black', display: 'flex'}}><HomeIcon />Home</Link>
+        <Link to="/Login" style={{textDecoration: 'none', color: 'black', display: 'flex'}}><LoginIcon />Login</Link>
+      </top>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/post/:id" element={<Post />} />
-        </Routes>
-      </Router>
+      <main>
+        <Outlet />
+      </main>
+
+
     </>
   )
 }
