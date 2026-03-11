@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import CommentIcon from '@mui/icons-material/Comment';
 
 export function PostCard() {
     const card = (
@@ -13,8 +15,9 @@ export function PostCard() {
                 <h1>titulo</h1>
                 <h4>descricao</h4>
             </CardContent>
-            <CardActions>
-                
+            <CardActions sx={{display:'flex', justifyContent:'center', gap:4}}>
+                <FavoriteBorderIcon/>
+                <CommentIcon />
             </CardActions>
         </React.Fragment>
     );
