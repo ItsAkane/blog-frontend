@@ -6,5 +6,5 @@ Este projeto é um projeto da criação de um blog, a parte do front-end, neste 
 - Mui
 - React Vite
 - React Router
-
+##
 O back será criado em um outro projeto posteriormente, o back talvez será feito em *C#*
