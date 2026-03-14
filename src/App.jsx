@@ -1,7 +1,6 @@
-import { Link, Outlet } from 'react-router-dom'
-import './App.css';
-import HomeIcon from '@mui/icons-material/Home';
-import LoginIcon from '@mui/icons-material/Login';
+import { Outlet } from 'react-router-dom'
+import './index.css';
+import { Navbar } from './Components/navbar';
 
 function App() {
 
@@ -9,12 +8,7 @@ function App() {
 
   return (
     <>
-      <top style={{display: 'flex', gap: '20px', padding: '10px', justifyContent: 'right'}}>
-        <Link to="/" style={{textDecoration: 'none', color: 'black', display: 'flex'}}><HomeIcon />Home</Link>
-        <Link to="/Login" style={{textDecoration: 'none', color: 'black', display: 'flex'}}>Login</Link>
-        <Link to="/register" style={{textDecoration: 'none', color: 'black', display: 'flex'}}>Register</Link>
-        
-      </top>
+    <Navbar/>
 
       <main>
         <Outlet />

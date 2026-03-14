@@ -10,12 +10,12 @@ import CommentIcon from '@mui/icons-material/Comment';
 
 export function PostCard() {
     const card = (
-        <React.Fragment>
-            <CardContent>
+        <React.Fragment >
+            <CardContent sx={{background: '#1E293B'}}>
                 <h1>titulo</h1>
                 <h4>descricao</h4>
             </CardContent>
-            <CardActions sx={{display:'flex', justifyContent:'center', gap:4}}>
+            <CardActions sx={{display:'flex', justifyContent:'center', gap:4, background: '#1E293B'}}>
                 <FavoriteBorderIcon/>
                 <CommentIcon />
             </CardActions>
