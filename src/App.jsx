@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import './index.css';
-import { Navbar } from './Components/navbar';
+import { Alayout } from './Components/alayout';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <Alayout />
 
       <main>
         <Outlet />

@@ -13,9 +13,11 @@ export function PostCard() {
         <React.Fragment >
             <CardContent sx={{background: '#1E293B'}}>
                 <h1>titulo</h1>
-                <h4>descricao</h4>
+                <Typography>
+                    Descricao
+                </Typography>
             </CardContent>
-            <CardActions sx={{display:'flex', justifyContent:'center', gap:4, background: '#1E293B'}}>
+            <CardActions sx={{display:'flex', justifyContent:'left', gap:4, background: '#1E293B'}}>
                 <FavoriteBorderIcon/>
                 <CommentIcon />
             </CardActions>

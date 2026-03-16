@@ -7,8 +7,8 @@ export default function Login() {
     <>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', mt: 5 }}>
         <h1>Faça Login</h1>
-        <TextField id="Login-input" label="Login" variant="outlined" />
-        <TextField id="Password-input" label="Senha" variant="outlined" />
+        <TextField id="Login-input" label="Login" variant="outlined" focused/>
+        <TextField id="Password-input" label="Senha" variant="outlined" focused/>
         <Button id="LoginBtn" variant="outlined">Login</Button>
 
         <Link to="/register" tyle={{ textdeoration: 'none' }}>
