@@ -7,17 +7,18 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CommentIcon from '@mui/icons-material/Comment';
+import './postCard.css';
 
 export function PostCard() {
     const card = (
-        <React.Fragment >
-            <CardContent sx={{background: '#1E293B'}}>
+        <React.Fragment>
+            <CardContent className="postCardContent">
                 <h1>titulo</h1>
                 <Typography>
                     Descricao
                 </Typography>
             </CardContent>
-            <CardActions sx={{display:'flex', justifyContent:'left', gap:4, background: '#1E293B'}}>
+            <CardActions className="postCardActions">
                 <FavoriteBorderIcon/>
                 <CommentIcon />
             </CardActions>
@@ -25,7 +26,7 @@ export function PostCard() {
     );
 
     return (
-        <Box sx={{ minWidth: 700 }}>
+        <Box className="postCardContainer">
             <Card variant="outlined">{card}</Card>
         </Box>
     )

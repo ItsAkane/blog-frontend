@@ -1,0 +1,46 @@
+:root {
+	--bg-dark: #111827;
+	--text-main: #e5e7eb;
+	--text-secondary: #9ca3af;
+	--primary-blue: #1e3a8a;
+	--accent-amber: #f59e0b;
+
+	/* POST CARD colors */
+	--postCard-bg: #1e293b;
+}
+
+.postCardContainer {
+	min-width: 700px;
+}
+
+.postCardContent {
+	background: var(--postCard-bg);
+}
+
+.postCardContent h1 {
+	color:var(--text-main);
+	margin: 0;
+}
+
+.postCardContent p{
+	color: var(--text-secondary);
+}
+
+.postCardActions {
+	background: var(--postCard-bg);
+
+	display: flex;
+	justify-content: flex-start;
+	gap: 4;
+}
+
+.postCardActions svg {
+	color: var(--text-secondary);
+	cursor: pointer;
+
+	transition: color 0.25s;
+}
+
+.postCardActions svg:hover {
+	color: var(--accent-amber);
+}

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { PostCard } from "../Components/postCard";
+import { PostCard } from "../../Components/postCard";
 import { Link } from "react-router-dom";
 
 
