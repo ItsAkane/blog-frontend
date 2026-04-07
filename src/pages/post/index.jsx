@@ -1,10 +1,11 @@
 import "./post.css"
 import { CardActions, Typography } from "@mui/material";
 import { Link, useParams } from "react-router-dom"
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CommentIcon from '@mui/icons-material/Comment';
 import ComentaryCard from "../../Components/comentaryCard";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 export default function Post() {
     const { id } = useParams();
@@ -28,7 +29,8 @@ export default function Post() {
                 </div>
                 <div className="cardActions">
                     <CardActions>
-                        <FavoriteBorderIcon />
+                        <ArrowUpwardIcon />
+                        <ArrowDownwardIcon/>
                         <CommentIcon />
                     </CardActions>
                 </div>
