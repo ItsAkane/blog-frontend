@@ -10,12 +10,17 @@ import CommentIcon from '@mui/icons-material/Comment';
 import './postCard.css';
 
 export function PostCard() {
+
+    var title = "titulo"
+
+    var postContent = "descricao"
+
     const card = (
         <React.Fragment>
             <CardContent className="postCardContent">
-                <h1>titulo</h1>
+                <h1>{title}</h1>
                 <Typography>
-                    Descricao
+                    {postContent}
                 </Typography>
             </CardContent>
             <CardActions className="postCardActions">

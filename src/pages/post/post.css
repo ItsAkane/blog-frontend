@@ -1,0 +1,27 @@
+.post {
+    width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    background-color: #1E293B;
+    border: 1px solid #e5e7eb;
+}
+
+.cardActions{
+    display: flex;
+    margin-top: 30px;
+    border-top: 1px solid #e5e7eb;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#VoltarPost{
+    display: flex;
+    margin: 20px
+}
+
+.postTitle h1{
+    color: #e5e7eb;
+}
