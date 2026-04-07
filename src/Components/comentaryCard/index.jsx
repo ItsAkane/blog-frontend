@@ -1,3 +1,5 @@
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import "./comentaryCard.css";
 
 export default function ComentaryCard() {
@@ -20,6 +22,10 @@ export default function ComentaryCard() {
                 </div>
                 <div className="writenCommentary">
                     <p>{writenComentary}</p>
+                </div>
+                <div className="comentaryActions">
+                    <ArrowUpwardIcon />
+                    <ArrowDownwardIcon />
                 </div>
 
             </div>
