@@ -1,6 +1,8 @@
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import "./comentaryCard.css";
+import ResponseComentary from '../responseComentary';
+import UserInfoPost from '../userInfoPost';
 
 export default function ComentaryCard() {
     const userName = "User";
@@ -11,21 +13,17 @@ export default function ComentaryCard() {
     return (
         <>
             <div className="comentary">
-                <div className="UserInfo">
-                    <div className="userPhoto">
-                        <img src={image} alt="sherek" border="0" />
-                    </div>
-                    <div className="username">
-                        {userName}
-                    </div>
-                    <div className="comentaryDate">{comentaryDate}</div>
-                </div>
+                <UserInfoPost userName={userName} comentaryDate={comentaryDate} image={image}/>
                 <div className="writenCommentary">
                     <p>{writenComentary}</p>
                 </div>
                 <div className="comentaryActions">
                     <ArrowUpwardIcon />
                     <ArrowDownwardIcon />
+                </div>
+
+                <div className="resp">
+                    <ResponseComentary/>
                 </div>
 
             </div>
