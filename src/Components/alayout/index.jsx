@@ -14,7 +14,7 @@ export function Alayout() {
 						variant="outlined"
 						focused
 					/>
-				</form>
+				</form>	
 			</aside>
 
 			<nav className="nav">
