@@ -3,7 +3,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import UserInfoPost from '../userInfoPost';
 
 export default function ResponseComentary() {
-    const image = ""
+    const image = "https://i.ibb.co/8n55RtLx/sherek.webp"
     const userName = "user"
     const comentaryDate = "01/01/1999"
     const writenResp = "teste"
