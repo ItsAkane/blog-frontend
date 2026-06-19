@@ -1,0 +1,63 @@
+:root {
+	--bg-dark: #111827;
+	--text-main: #e5e7eb;
+	--text-secondary: #9ca3af;
+	--primary-blue: #1e3a8a;
+	--accent-amber: #f59e0b;
+
+	/* LAYOUT colors */
+	--aside-bg: #1e293b;
+	--link-color: black;
+}
+
+.aside {
+	color: var(--text-main);
+	background: var(--aside-bg);
+	padding: 50px;
+
+	width: 150px;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+
+	position: fixed;
+	top: 35px;
+	left: 0;
+}
+
+.nav {
+	box-sizing: border-box;
+	background: var(--primary-blue);
+	padding: 12px;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	position: fixed;
+	gap: 20px;
+	top: 0;
+	left: 0;
+
+	z-index: 10;
+}
+
+.link {
+	color: var(--text-main);
+	text-decoration: none;
+
+	padding: 0.5rem;
+	border-radius: 4px;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	transition: background-color 0.25s;
+}
+
+.link:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}

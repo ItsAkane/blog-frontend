@@ -1,0 +1,33 @@
+.post {
+    max-width: 100%;
+    width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto;
+    background-color: #1E293B;
+    border: 1px solid #e5e7eb;
+}
+
+#VoltarPost {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    color: #94a3b8;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.cardActions{
+    display: flex;
+    margin-top: 30px;
+    border-top: 1px solid #e5e7eb;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.postTitle h1{
+    color: #e5e7eb;
+}
