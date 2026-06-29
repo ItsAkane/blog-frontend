@@ -1,16 +1,31 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 
 export default function Login() {
+
+  const { login } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  async function handleLogin(e){
+    e.preventDefault();
+
+    login();
+    
+    navigate("/");
+  }
+
   return (
     <>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <h1>Faça Login</h1>
-        <Box component="form" action="" sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+        <Box component="form"  onSubmit={handleLogin} sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
           <TextField id="Login-input" label="Login" variant="outlined" focused />
-          <TextField id="Password-input" label="Senha" variant="outlined" focused />
-          <Button id="LoginBtn" variant="outlined">Login</Button>
+          <TextField type="password" id="Password-input" label="Senha" variant="outlined" focused />
+          <Button type="submit" id="LoginBtn" variant="outlined">Login</Button>
         </Box>
 
 
