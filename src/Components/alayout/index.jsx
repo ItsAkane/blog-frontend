@@ -1,14 +1,19 @@
 import HomeIcon from "@mui/icons-material/Home";
 import LogoutIcon from '@mui/icons-material/Logout';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import "./layout.css"
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
 export function Alayout() {
+	const { isLoggedIn, logout } = useContext(AuthContext);
+	const navigate = useNavigate();
 
-	const {isLoggedIn, logout} = useContext(AuthContext);
+	const handleLogout = () => {
+		logout();
+		navigate("/Login");
+	};
 
 	return (
 		<>
@@ -30,7 +35,7 @@ export function Alayout() {
 				</Link>
 
 				{isLoggedIn ? (
-					<Link to="/" className="link" onClick={logout}>
+					<Link to="/" className="link" onClick={handleLogout}>
 						<LogoutIcon />
 					</Link>
 				) : (
