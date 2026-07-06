@@ -1,20 +1,53 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
+import { API_URL } from "../../config/api";
 
 
 export default function Login() {
+
+  const { login } = useContext(AuthContext);
+  const [loginInput, setLoginInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const resposta = await fetch(`${API_URL}/api/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ login: loginInput, password: passwordInput })
+      });
+
+      if (resposta.ok) {
+        const dados = await resposta.json();
+        login(dados);
+        alert("Bem-vindo!");
+        navigate("/");
+      } else {
+        alert("Usuário ou senha incorretos.");
+      }
+    } catch (error) {
+      alert("Erro ao conectar com o servidor.");
+    }
+  };
+
   return (
     <>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', mt: 5 }}>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
         <h1>Faça Login</h1>
-        <form action="">
-          <TextField id="Login-input" label="Login" variant="outlined" focused/>
-          <TextField id="Password-input" label="Senha" variant="outlined" focused/>
-          <Button id="LoginBtn" variant="outlined">Login</Button>
-        </form>
+        <Box component="form" onSubmit={handleLogin} sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <TextField id="Login-input" label="Login" variant="outlined" focused value={loginInput} onChange={(e) => setLoginInput(e.target.value)} />
+          <TextField type="password" id="Password-input" label="Senha" variant="outlined" focused value={passwordInput} onChange={(e) => setPasswordInput(e.target.value)} />
+          <Button type="submit" id="LoginBtn" variant="outlined">Login</Button>
+        </Box>
 
 
-        <Link to="/register" tyle={{ textdeoration: 'none' }}>
+        <Link to="/register" style={{ textdeoration: 'none' }}>
           <Typography s>
             Ainda não possui conta?
             Cadastre-se
