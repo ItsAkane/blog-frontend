@@ -1,6 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { API_URL } from "../../config/api";
 
 export function Register() {
 
@@ -19,7 +20,7 @@ export function Register() {
         };
 
         try {
-            const respost = await fetch('http://localhost:3000/api/cadastrar/login', {
+            const respost = await fetch(`${API_URL}/api/cadastrar-login`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -29,7 +30,7 @@ export function Register() {
 
             if (!respost.ok) {
                 const erroBackend = await respost.json();
-                throw new Error(erroBackend.mensagem || 'Erro ao cadastrar usuario');
+                throw new Error(erroBackend.error || 'Erro ao cadastrar usuario');
             }
 
             const dados = await respost.json();
