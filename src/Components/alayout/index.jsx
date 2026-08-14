@@ -17,16 +17,13 @@ export function Alayout() {
 
 	return (
 		<>
-			<aside className="aside">
-				<form action="?">
-					<TextField
-						id="standard-field"
-						label="Search"
-						variant="outlined"
-						focused
-					/>
-				</form>
-			</aside>
+			<lside className="lside">
+				<div>
+					ola mundo
+				</div>
+			</lside>
+
+			<rside className="rside"/>
 
 			<nav className="nav">
 				<Link to="/" className="link">

@@ -10,7 +10,7 @@
 	--link-color: black;
 }
 
-.aside {
+.lside {
 	color: var(--text-main);
 	background: var(--aside-bg);
 	padding: 50px;
@@ -24,6 +24,22 @@
 	position: fixed;
 	top: 35px;
 	left: 0;
+}
+
+.rside{
+	color: var(--text-main);
+	background: var(--aside-bg);
+	padding: 50px;
+
+	width: 150px;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+
+	position: fixed;
+	top: 35px;
+	right: 0;
 }
 
 .nav {
